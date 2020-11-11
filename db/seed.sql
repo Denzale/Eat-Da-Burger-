@@ -1,8 +1,8 @@
 INSERT INTO burgers (burger_name)
-VALUES ("")
+VALUES ("Big Burger")
 
 INSERT INTO burgers (burger_name)
-VALUES ("")
+VALUES ("Med Burger")
 
 INSERT INTO burgers (burger_name)
-VALUES ("")
+VALUES ("Small Burger")
