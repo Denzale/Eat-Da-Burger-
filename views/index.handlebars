@@ -1,9 +1,9 @@
 <div id="burger-body">
-<h1>Burgers!</h1>
+<h1>Free Burgers</h1>
 <img alt="image of a burger" id="burger-img" src="/assets/img/burger_25327-97.jpg"/>
 
 
-<h2>Burger that are not devoured!</h2>
+<h2>Burger that are not yet eaten!</h2>
 
 
 
@@ -11,18 +11,17 @@
 <ul>
     {{#each burgers}}
     {{#unless devoured}}
-    <li>{{burger_name}}
-    <button class="change-devoured" data-id="{{id}}">Devour Burger</button></li>
+    <li>{{burger}}
     {{/unless}}
     {{/each}}
 </ul>
 
-<h2>Burgers that are devoured!</h2>
+<h2>Burgers that are eaten!</h2>
 
 <ul>
     {{#each burgers}}
     {{#if devoured}}
-    <li>{{burger_name}}</li>
+    <li>{{burger}}</li>
     {{/if}}
     {{/each}}
 </ul>
@@ -31,12 +30,12 @@
 <form class="create-form">
 
     <div class="form-group">
-        <label for="burger-name">Burger Name:</label>
-        <input type="text" id="burger-name" name="name">
+        <label for="burger">Burger Name:</label>
+        <input type="text" id="burger" name="name">
     </div>
 
     <div class="form-group">
-        <label for="burger-devoured">Devoured?</label><br>
+        <label for="burger-devoured">Eaten</label><br>
         <input type="radio" name="burger-devoured" value="1" checked>Devoured!<br>
         <input type="radio" name="burger-devoured" value="0"> Not devoured
     </div>
@@ -44,6 +43,5 @@
     <button type="submit">Add Burger</button>
 </form>
 
-<footer id="footer"><a href="https://www.vecteezy.com/free-vector/fast-food">Fast Food Vectors by Vecteezy</a></footer>
 
 </div>
