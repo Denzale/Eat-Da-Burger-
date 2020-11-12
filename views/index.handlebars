@@ -1,47 +1,73 @@
 <div id="burger-body">
-<h1>Free Burgers</h1>
-<img alt="image of a burger" id="burger-img" src="/assets/img/burger_25327-97.jpg"/>
+    <h1>Burgers!</h1>
+    <img id="burger-img" src="/assets/img/burger.png" />
+
+<div id = "container">
+
+    <div class = "style">
+    <h2>Burger that are not yet eaten!</h2>
 
 
-<h2>Burger that are not yet eaten!</h2>
+ <div class="row" style="padding-top: 10px; padding-bottom: 10px;">
+  <div class="col text-center">
 
 
+    
+            <ul class="list-group list-group-flush">
+                {{#each burgers}}
+                {{#unless devoured}}
+                <li>{{burger_name}}
+                    <button type="submit" class="devourBurger btn btn-danger" data-id="{{id}}">Devour!</button>
+                </li>
+                {{/unless}}
+                {{/each}}
+            </ul>
+        </div>
 
 
-<ul>
-    {{#each burgers}}
-    {{#unless devoured}}
-    <li>{{burger}}
-    {{/unless}}
-    {{/each}}
-</ul>
+        
+        <div class="col text-center"></div>
+        <h2>Burgers that are eaten!</h2>
 
-<h2>Burgers that are eaten!</h2>
-
-<ul>
-    {{#each burgers}}
-    {{#if devoured}}
-    <li>{{burger}}</li>
-    {{/if}}
-    {{/each}}
-</ul>
-
-<h2>Add a Burger</h2>
-<form class="create-form">
-
-    <div class="form-group">
-        <label for="burger">Burger Name:</label>
-        <input type="text" id="burger" name="name">
+        <ul>
+            {{#each burgers}}
+            {{#if devoured}}
+            <li>{{burger_name}}
+            </li>
+            {{/if}}
+            {{/each}}
+        </ul>
     </div>
+    <h2>Add a Burger</h2>
+    <form class="create-form">
 
-    <div class="form-group">
-        <label for="burger-eaten">Eaten</label><br>
-        <input type="radio" name="burger-eaten" value="1" checked>Devoured!<br>
-        <input type="radio" name="burger-eaten" value="0"> Not devoured
+        <div class="form-group">
+            <label for="burgerName">Burger Name</label>
+            <input type="text" id="burgerName" name="name">
+        </div>
+
+        <div class="form-group">
+            <label for="burger-eaten">Eaten</label><br>
+            <input type="radio" name="burger-eaten" value="1" checked>
+            Devoured
+            <br>
+            <input type="radio" name="burger-eaten" value="0"> Not devoured
+        </div>
+
+        <button type="submit">Add Burger</button>
+    </form>
+
+
+</div>
+</div>
+
+<footer class="page-footer bg-light">
+    <div class="row">
+        <div class="col text-center">
+            <hr>
+            <p>&copy; Denzale Houston 2020</p>
+        </div>
     </div>
-
-    <button type="submit">Add Burger</button>
-</form>
-
+</footer>
 
 </div>

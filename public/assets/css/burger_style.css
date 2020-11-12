@@ -1,0 +1,51 @@
+body {
+  background-color: white;
+}
+#burger-img{
+  width: 150px;
+  height: 150px;
+}
+
+#burger-body {
+  text-align: center;
+  margin: auto;
+  width: 50%;
+}
+
+#footer {
+  margin-top: 30px;
+  position: fixed;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%)
+}
+li {
+  padding: 5px;
+  margin: 5px;
+  background: #faebd7;
+}
+
+.label {
+  font-weight: bold;
+}
+.create-update-form {
+  padding: 5px;
+  margin: 5px;
+  background: aqua;
+}
+
+.form-group {
+  margin-bottom: 5px;
+}
+
+#container{
+  display: flex;
+  justify-content: center;
+}
+
+.style{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50%;
+}
